@@ -174,7 +174,7 @@ footer{padding:34px 0 50px;color:var(--mute);font-size:15px}.fr{display:flex;jus
 
 <script>
 /* ===== EDIT THESE ===== */
-var CONFIG={email:"",github:"",linkedin:""}; // email:"you@example.com", github:"https://github.com/you", linkedin:"https://www.linkedin.com/in/you"
+var CONFIG={email:"shayanakram654@gmail.com",linkedin:"https://www.linkedin.com/in/shayan-hussain51214/",whatsapp:"971524731253",github:""}; // whatsapp: digits only with country code (messages only). github: e.g. "https://github.com/you" (hidden while empty)
 
 var PROJECTS=[
 {id:1,t:"Royal Atlantic World",cat:"Business website",tag:["web"],st:"Live",url:"https://royalatlanticworld.com/",d:"A business website I worked on."},
@@ -248,7 +248,7 @@ $("#work").addEventListener("click",function(e){var b=e.target.closest(".pr");if
 $("#sg").innerHTML=STACK.map(function(g){return '<div class="sg"><h3>'+g[0]+'</h3><div class="tg">'+g[1].map(function(s){var ex=s.slice(-1)==="*",n=ex?s.slice(0,-1):s;return '<button class="tag'+(ex?" ex":"")+'" type="button" data-s="'+n+'">'+n+"</button>"}).join("")+"</div></div>"}).join("");
 $("#sg").onclick=function(e){var b=e.target.closest("[data-s]");if(!b)return;document.querySelectorAll(".tag").forEach(function(t){t.classList.toggle("sel",t===b)});$("#note").innerHTML="<b>"+b.dataset.s+"</b> "+(NOTES[b.dataset.s]||NOTES.d)};
 /* contact */
-var C=[];if(CONFIG.email)C.push(["Email me","mailto:"+CONFIG.email]);if(CONFIG.github)C.push(["GitHub",CONFIG.github]);if(CONFIG.linkedin)C.push(["LinkedIn",CONFIG.linkedin]);
+var C=[];if(CONFIG.email)C.push(["Email me","mailto:"+CONFIG.email]);if(CONFIG.linkedin)C.push(["LinkedIn",CONFIG.linkedin]);if(CONFIG.whatsapp)C.push(["WhatsApp (messages only)","https://wa.me/"+CONFIG.whatsapp]);if(CONFIG.github)C.push(["GitHub",CONFIG.github]);
 $("#cl").innerHTML=C.map(function(c,i){var ex=c[1].indexOf("http")===0;return '<a class="btn'+(i===0?" p":"")+'" href="'+c[1]+'"'+(ex?' target="_blank" rel="noopener noreferrer"':"")+">"+c[0]+(ex?" ↗":"")+"</a>"}).join("");
 $("#cl").hidden=!C.length;$("#cn").hidden=C.length>0;
 /* marquee + page glow */
